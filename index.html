@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árbol Genealógico - Familia Pérez Rubio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f6f6f6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        header p { opacity: 0.9; }
+        nav {
+            background: #34495e;
+            padding: 1rem 2rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 2rem;
+            opacity: 0.8;
+        }
+        nav a:hover { opacity: 1; }
+        main {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+            padding: 2rem;
+        }
+        .sidebar {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            height: fit-content;
+        }
+        .sidebar h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        .sidebar ul { list-style: none; }
+        .sidebar li { margin-bottom: 0.5rem; }
+        .sidebar a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        .sidebar a:hover { text-decoration: underline; }
+        .content h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #3498db;
+        }
+        .content h3 {
+            color: #34495e;
+            margin: 1.5rem 0 0.5rem;
+        }
+        .highlight-box {
+            background: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .person-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .person-card h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        .person-card .dates {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .tag {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin-right: 0.5rem;
+        }
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            main { grid-template-columns: 1fr; }
+            nav a { display: block; margin-bottom: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌳 Árbol Genealógico</h1>
+            <p>Proyecto de investigación histórica - Familia Pérez Rubio</p>
+        </header>
+        
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="personas.html">Personas</a>
+            <a href="documentos.html">Documentos</a>
+            <a href="lugares.html">Lugares</a>
+        </nav>
+        
+        <main>
+            <aside class="sidebar">
+                <h3>📍 Lugares</h3>
+                <ul>
+                    <li><a href="#pedroso">Pedroso, La Rioja</a></li>
+                    <li><a href="#ledesma">Ledesma de la Cogolla</a></li>
+                    <li><a href="#mexico">Nueva España (México)</a></li>
+                </ul>
+                
+                <h3 style="margin-top: 2rem;">🏷️ Etiquetas</h3>
+                <ul>
+                    <li><span class="tag">Nobleza</span></li>
+                    <li><span class="tag">Militar</span></li>
+                    <li><span class="tag">Siglo XVII</span></li>
+                    <li><span class="tag">Gobernador</span></li>
+                </ul>
+            </aside>
+            
+            <div class="content">
+                <h2>Hallazgos Recientes</h2>
+                
+                <div class="highlight-box">
+                    <strong>🔍 Descubrimiento clave:</strong> Identificación del retrato al óleo del 
+                    <strong>Capitán Don Juan de Villarreal Almarza y Moreno</strong>, Gobernador General 
+                    de México a finales del siglo XVII.
+                </div>
+                
+                <h3>Personajes Destacados</h3>
+                
+                <div class="person-card">
+                    <h4>Capitán Don Juan de Villarreal Almarza y Moreno</h4>
+                    <div class="dates">Siglo XVII • Pedroso, La Rioja</div>
+                    <p>Hidalgo con rango militar (capitán de milicias). <strong>Gobernador General de México</strong> 
+                    a finales del siglo XVII. Fundador de capilla en la Iglesia de El Salvador de Pedroso, 
+                    cerrada con rejería barroca. Retrato al óleo conservado con inscripción original visible.</p>
+                    <p style="margin-top: 0.5rem;">
+                        <span class="tag">Gobernador</span>
+                        <span class="tag">Nobleza</span>
+                        <span class="tag">Militar</span>
+                    </p>
+                </div>
+                
+                <div class="person-card">
+                    <h4>Francisco Antonio Pérez Rubio</h4>
+                    <div class="dates">28 de abril de 1677 • Pedroso, La Rioja</div>
+                    <p>Bautizado en Pedroso. Primera generación documentada en la línea Pérez.</p>
+                    <p style="margin-top: 0.5rem;"><strong>Padre:</strong> José/Joseph Pérez (hijo de Esteban)<br>
+                    <strong>Madre:</strong> María Rubio (hija de Antonio)</p>
+                    <p style="margin-top: 0.5rem;">
+                        <span class="tag">Partida de Bautismo</span>
+                        <span class="tag">1677</span>
+                    </p>
+                </div>
+                
+                <h3>Líneas de Investigación</h3>
+                <ul>
+                    <li>Conexión entre la nobleza de Pedroso y las redes de poder en Nueva España</li>
+                    <li>Línea Pérez: Ledesma de la Cogolla → Pedroso</li>
+                    <li>Fundaciones de capillas y patronazgo religioso en La Rioja</li>
+                    <li>El capitán Villarreal vs. Juan de Pedroso (dos nobles distintos)</li>
+                </ul>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Proyecto personal de investigación genealógica • 2026</p>
+        </footer>
+    </div>
+</body>
+</html>
